@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="app-order" />
+        <module name="app-user" />
+        <module name="infra-config" />
+        <module name="infra-discovery" />
+        <module name="infra-discovery (1)" />
+        <module name="infra-gateway" />
+        <module name="infra-hystrix" />
+        <module name="infra-zipkin" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="app-order" target="1.8" />
+      <module name="app-user" target="1.8" />
+      <module name="demo" target="1.8" />
+      <module name="infra-config" target="1.8" />
+      <module name="infra-discovery" target="1.8" />
+      <module name="infra-discovery (1)" target="1.8" />
+      <module name="infra-gateway" target="1.8" />
+      <module name="infra-hystrix" target="1.8" />
+      <module name="infra-zipkin" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

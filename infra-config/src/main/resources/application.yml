@@ -1,0 +1,35 @@
+server:
+  port: 8888
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/ChenJing940528/projconfig.git
+          search-paths:
+          username:
+          password:
+      label: master
+  application:
+    name: infra-config
+#  rabbitmq:
+#    host: 10.7.26.82
+#    port: 5672
+#    username: guest
+#    password: guest
+encrypt:
+  key: chenjing
+security:
+  basic:
+    enabled: true
+  user:
+    name: admin
+    password: admin123
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://admin:admin123@localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+

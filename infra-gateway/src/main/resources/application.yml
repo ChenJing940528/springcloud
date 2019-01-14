@@ -1,0 +1,43 @@
+server:
+  port: 8040
+  servlet:
+    context-path: /
+    session:
+      timeout: 300
+  tomcat:
+    uri-encoding: UTF-8
+  compression:
+    enabled: true
+
+spring:
+  application:
+    name: infra-gateway
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://admin:admin123@localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+zuul:
+#忽略所有的服务
+#  ignored-services: '*'
+  routes:
+    app-order:
+      service-id: app-order
+      path: /order/**
+  sensitive-headers:
+  ignore-security-headers: true
+#禁用某个过滤器
+#  InfraZuulFilter:
+#    pre:
+#      disable: true
+#在路径前面加一个/api
+#  prefix: /api
+
+
+
+
+
+
+
